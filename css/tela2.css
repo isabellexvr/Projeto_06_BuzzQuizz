@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*---------------------Geral---------------------*/
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    object-fit: cover;
+}
+
+.question h3, .resultTitle h3{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+/*---------------------Titulo Quizz---------------------*/
+
+.banner{
+    margin-top: 69px;
+    width: 100%;
+    height: 142px;
+    display: flex;
+    position: relative;
+}
+
+.banner .gradient {
+    position: absolute;
+    width: 100%;
+    height: 142px;
+    z-index: 1;
+    top: 0;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 64.58%, #000000 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.banner img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 142px;
+    object-fit: cover;
+}
+
+.acertou {
+    color: #009C22;
+
+}
+
+.errou {
+    color: #FF4B4B;
+}
+
+.naoSelecionado {
+    background: rgb(255, 255, 255);
+    opacity: 0.5;
+    color: #FF4B4B;
+
+}
+
+.banner h2{
+    position: absolute;
+    z-index: 2;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+
+/*---------------------Perguntas---------------------*/
+.questions{
+    width: 100%;
+    margin-top: 28px;
+    background-color: #ffffff;
+    padding: 18px;
+}
+
+.question{
+    height: 89px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.options span{
+    margin-top: 18px;
+    height: 49%;
+    width: 49%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+.options span img{
+    width: 100%;
+    height: 113px;
+    object-fit: cover;
+}
+
+.options span p{
+    margin-top: 15px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 15px;
+}
+
+/*---------------------Resultado---------------------*/
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 500px;
+    background-color:#ffffff;
+    margin-top: 24px;
+    padding: 18px;
+}
+
+.resultTitle{
+    width: 100%;
+    height: 99px;
+    background-color: #EC362D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.resultContent{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+.resultContent img{
+    width: 100%;
+    height: 255px;
+    
+}
+
+.resultContent p{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 22px;
+    color: #484848;
+}
+
+/*--respostas--*/
+.correct{
+    color: #009C22;
+}
+.wrong{
+    opacity: 0.3;
+    color: #FF4B4B;
+}
+
+/*---------------------Botões---------------------*/
+
+.buttons button{
+    margin:auto;
+    height: 44px;
+    width: 58.6%;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color:#FAFAFA;
+}
+
+/* .buttons {
+    background-color: purple;
+    display: flex;
+} */
+
+.buttons .button1, .buttons .button2 {
+    margin: 0 auto;
+    cursor: pointer;;
+}
+
+.buttons .button1{
+    background-color: #EC362D;
+    margin-top: 57px;
+}
+
+.buttons .button2{
+    margin-top: 8px;
+    margin-bottom: 66px;
+    color:#818181;
+    background-color: #FAFAFA;
+}
+
+/*---------------------Responsividade---------------------*/
+
+@media (min-width: 1100px){
+
+    .banner{
+        margin-top: 69px;
+        height: 227px;
+    }
+
+    .banner .gradient{
+        height: 227px;
+    }
+
+    .banner img{
+        height: 227px;
+    }
+
+    .banner h2{
+        font-size: 39px;
+    }
+
+
+    .questions{
+        width: 60%;
+        margin: 42px auto 0 auto;
+    }
+
+    .question{
+        height: 140px;
+    }
+
+    h3{
+        font-size: 23px;
+    }
+
+    .options span img{
+        height: 175px;
+    }
+
+    .options span p{
+        font-size: 20px;
+    }
+
+
+    .result{
+        height: 430px;
+        width: 60%;
+        margin: 24px auto 0 auto;
+    }
+
+    .resultContent{
+        margin-top: 18px;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .resultContent img{
+        height: 100%;
+        width: 50%;
+        margin-right: 21px;
+    }
+
+    .resultContent p{
+        font-size: 19px;
+    }
+
+    .buttons button{
+        height: 52px;
+        width: 20%;
+    }
+}
